@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Nosotros">
+  
+  <div class="nosotros-container">
+    <div class="nosotros-texto"><h1>Sobre Nosotros</h1>
+      <p>Espacio Cultural es una organización comprometida con el desarrollo social y artístico de nuestra comunidad. Nuestro propósito principal es brindar un lugar inclusivo y dinámico donde las personas de todas las edades puedan explorar sus talentos, compartir aprendizajes y enriquecerse a través de diversas expresiones culturales.</p>
+    </div>
+    <div class="nosotros-img">
+      <img src="/img/nosotros.jpg" alt="Instalaciones de Espacio Cultural" />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .nosotros-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .nosotros-img img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  @media (min-width: 768px) {
+    .nosotros-container {
+      flex-direction: row;
+      align-items: center;
+    }
+    .nosotros-texto, .nosotros-img {
+      flex: 1;
+    }
+  }
+</style>
